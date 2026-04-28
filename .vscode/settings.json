@@ -1,53 +1,69 @@
 {
+    "files.insertFinalNewline": true,
+    "files.eol": "\n",
     "json.schemas": [
         {
             "fileMatch": [
-                "/assets/resource/**/*.json",
-                "/install/resource/**/*.json",
-                "/assets/resource/**/*.jsonc",
-                "/install/resource/**/*.jsonc"
+                "/assets/resource/pipeline/**/*.json",
+                "/assets/resource_*/pipeline/**/*.json",
+                "/install/resource/pipeline/**/*.json",
+                "/install/resource_*/pipeline/**/*.json",
+                "/assets/resource/pipeline/**/*.jsonc",
+                "/assets/resource_*/pipeline/**/*.jsonc",
+                "/install/resource/pipeline/**/*.jsonc",
+                "/install/resource_*/pipeline/**/*.jsonc"
             ],
-            "url": "/deps/tools/pipeline.schema.json"
+            "url": "/tools/schema/pipeline.schema.json"
         },
         {
             "fileMatch": [
                 "/assets/interface.json",
                 "/install/interface.json"
             ],
-            "url": "/deps/tools/interface.schema.json"
+            "url": "/tools/schema/interface.schema.json"
         },
         {
             "fileMatch": [
                 "/assets/tasks/**/*.json",
                 "/install/tasks/**/*.json"
             ],
-            "url": "/deps/tools/interface_import.schema.json"
+            "url": "/tools/schema/interface_import.schema.json"
         },
         {
             "fileMatch": [
                 "/install/config/maa_pi_config.json"
             ],
-            "url": "/deps/tools/interface_config.schema.json"
+            "url": "/tools/schema/interface_config.schema.json"
+        },
+        {
+            "fileMatch": [
+                "/tests/**/*.json",
+                "/tests/**/*.jsonc"
+            ],
+            "url": "/tools/schema/test.schema.json"
         }
     ],
     "files.associations": {
-        "**/assets/**/*.json": "jsonc"
+        "**/assets/**/*.json": "jsonc",
+        "**/tests/**/*.json": "jsonc"
     },
     "[json][jsonc]": {
         "editor.formatOnSave": true,
-        "editor.insertSpaces": true,
-        "editor.tabSize": 4,
-        "editor.indentSize": "tabSize",
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[python]": {
+        "editor.formatOnSave": true,
         "editor.defaultFormatter": "ms-python.black-formatter"
     },
     "[markdown]": {
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
     },
-    "[jsonc]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "[go]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "golang.go",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
     }
 }
