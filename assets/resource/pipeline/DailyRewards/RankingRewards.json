@@ -30,8 +30,7 @@
             }
         },
         "next": [
-            "RankingRewardFlagInArk",
-            "RankingRewardsStart"
+            "RankingRewardFlagInArk"
         ]
     },
     "RankingRewardFlagInArk": {
@@ -49,7 +48,11 @@
                     "方舟"
                 ]
             }
-        }
+        },
+        "next": [
+            "RankingRewardReddotInArk",
+            "EnterHall"
+        ]
     },
     "RankingRewardReddotInArk": {
         "desc": "方舟内部排名奖励的红点",
