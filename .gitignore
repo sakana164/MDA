@@ -440,12 +440,18 @@ enc_temp_folder/*
 .nuke/temp/*
 
 # Build
+install/
+maafw/*
+mxu*
 deps/*
 !deps/tools/
 deps/tools/*
 !deps/tools/*.schema.json
 build
-install
+
+# MaaDebugger
+.nicegui/*
+.maa
 
 # Tools
 tools/ImageCropper/**/*.png
@@ -456,3 +462,29 @@ debug
 # Go
 agent/go-service/vendor/
 agent/go-service/debug/
+.gocache
+__debug_bin*
+
+# Python
+venv/
+.venv/
+.cache/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+Network Trash Folder
+Temporary Items
+
+# opencode
+.opencode/*
+!.opencode/skills/
