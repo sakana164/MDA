@@ -40,14 +40,14 @@
             }
         },
         "next": [
-            "[JumpBack]ClaimDefenseRewards",
+            "[JumpBack]OutpostClaimDefenseRewards",
             "[JumpBack]WipeOut",
             "[JumpBack]CommonConfirmReward",
             "OutpostOnMainPage",
             "[JumpBack]CommonGoBack"
         ]
     },
-    "ClaimDefenseRewards": {
+    "OutpostClaimDefenseRewards": {
         "desc": "领取防御奖励",
         "max_hit": 1,
         "recognition": {
@@ -85,10 +85,10 @@
             "type": "Click"
         },
         "next": [
-            "WipeOutConfirm"
+            "OutpostConfirmWipeOut"
         ]
     },
-    "WipeOutConfirm": {
+    "OutpostConfirmWipeOut": {
         "desc": "确认一举歼灭",
         "recognition": {
             "type": "OCR",

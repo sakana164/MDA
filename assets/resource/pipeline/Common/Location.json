@@ -8,12 +8,12 @@
             "[JumpBack]ServerConfirm",
             "[JumpBack]DownloadConfirm",
             "[JumpBack]LoginConfirm",
-            "[JumpBack]ClickHomeButton",
+            "[JumpBack]NavigationClickHomeButton",
             "[JumpBack]SkipPlot",
-            "[JumpBack]CloseSale",
+            "[JumpBack]CommonCloseSale",
             "[JumpBack]CommonConfirmReward",
             "ActiveCheck",
-            "[JumpBack]ClickHall"
+            "[JumpBack]NavigationClickHall"
         ]
     },
     "ServerConfirm": {
@@ -84,7 +84,7 @@
             }
         }
     },
-    "ClickHomeButton": {
+    "NavigationClickHomeButton": {
         "desc": "点击左下角的按钮直到返回大厅",
         "recognition": {
             "type": "TemplateMatch",
@@ -124,7 +124,7 @@
             "type": "Click"
         }
     },
-    "CloseSale": {
+    "CommonCloseSale": {
         "desc": "关闭推销",
         "recognition": {
             "type": "OCR",
@@ -207,7 +207,7 @@
             "CommonClosePage"
         ]
     },
-    "ClickHall": {
+    "NavigationClickHall": {
         "desc": "点击大厅",
         "recognition": {
             "type": "OCR",
@@ -231,7 +231,7 @@
         "desc": "进入方舟",
         "next": [
             "ArkCornerVisible",
-            "ClickArk",
+            "NavigationClickArk",
             "[JumpBack]NavigationEnterHall"
         ]
     },
@@ -252,7 +252,7 @@
             }
         }
     },
-    "ClickArk": {
+    "NavigationClickArk": {
         "desc": "点大厅的方舟",
         "recognition": {
             "type": "And",
@@ -267,7 +267,7 @@
         },
         "next": [
             "ArkCornerVisible",
-            "ClickArk"
+            "NavigationClickArk"
         ]
     },
     "ArkFlagInHall": {
@@ -401,7 +401,7 @@
             }
         }
     },
-    "ScrollUp": {
+    "CommonScrollUp": {
         "desc": "向上滑动",
         "max_hit": 1,
         "action": {

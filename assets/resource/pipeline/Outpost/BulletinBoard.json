@@ -102,11 +102,11 @@
         },
         "post_wait_freezes": 1000,
         "next": [
-            "BulletinBoardDispatchConfirm",
+            "OutpostConfirmDispatch",
             "EndTask"
         ]
     },
-    "BulletinBoardDispatchConfirm": {
+    "OutpostConfirmDispatch": {
         "desc": "全部派遣",
         "recognition": {
             "type": "OCR",

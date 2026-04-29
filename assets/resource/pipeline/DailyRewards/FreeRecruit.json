@@ -37,10 +37,10 @@
             }
         },
         "next": [
-            "FreeRecruitClick"
+            "DailyRewardsClickFreeRecruit"
         ]
     },
-    "FreeRecruitClick": {
+    "DailyRewardsClickFreeRecruit": {
         "desc": "点击免费招募",
         "recognition": {
             "type": "OCR",
@@ -61,10 +61,10 @@
         },
         "next": [
             "[JumpBack]SkipPlot",
-            "RecruitConfirm"
+            "DailyRewardsConfirmRecruit"
         ]
     },
-    "RecruitConfirm": {
+    "DailyRewardsConfirmRecruit": {
         "desc": "招募确认",
         "recognition": {
             "type": "OCR",

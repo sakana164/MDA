@@ -68,11 +68,11 @@
             }
         },
         "next": [
-            "ReceiveConfirm",
+            "DailyRewardsConfirmReceive",
             "SendAndReceive"
         ]
     },
-    "ReceiveConfirm": {
+    "DailyRewardsConfirmReceive": {
         "desc": "操作确认",
         "recognition": {
             "type": "TemplateMatch",

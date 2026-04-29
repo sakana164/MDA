@@ -13,7 +13,7 @@
             "ManualInterceptionBattle",
             "[JumpBack]CanQuickBattle",
             "[JumpBack]CanBattle",
-            "[JumpBack]CloseBattle",
+            "[JumpBack]BattleClosePage",
             "EndTask"
         ]
     },
@@ -218,7 +218,7 @@
             "InBattle"
         ]
     },
-    "CloseBattle": {
+    "BattleClosePage": {
         "desc": "退出战斗",
         "recognition": {
             "type": "TemplateMatch",

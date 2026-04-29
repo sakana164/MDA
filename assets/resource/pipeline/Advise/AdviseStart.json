@@ -74,8 +74,8 @@
         },
         "next": [
             "[JumpBack]RemoveFavorites",
-            "[JumpBack]AdviseConfirm",
-            "[JumpBack]RankIncreaseConfirm",
+            "[JumpBack]AdviseConfirmAction",
+            "[JumpBack]AdviseConfirmRankIncrease",
             "[JumpBack]EpisodeReward",
             "NextAdvise"
         ]
@@ -95,7 +95,7 @@
             "type": "Click"
         }
     },
-    "AdviseConfirm": {
+    "AdviseConfirmAction": {
         "desc": "确认咨询",
         "recognition": {
             "type": "TemplateMatch",
@@ -116,7 +116,7 @@
         },
         "post_delay": 2000
     },
-    "RankIncreaseConfirm": {
+    "AdviseConfirmRankIncrease": {
         "desc": "提升好感等级确认",
         "recognition": {
             "type": "OCR",
@@ -186,9 +186,9 @@
             "type": "Click"
         },
         "next": [
-            "[JumpBack]AdviseConfirm",
+            "[JumpBack]AdviseConfirmAction",
             "[JumpBack]AdviseStory",
-            "[JumpBack]RankIncreaseConfirm",
+            "[JumpBack]AdviseConfirmRankIncrease",
             "[JumpBack]EpisodeReward",
             "NextAdvise"
         ]

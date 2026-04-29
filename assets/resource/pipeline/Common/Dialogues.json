@@ -11,8 +11,8 @@
         },
         "next": [
             "[JumpBack]SkipStory",
-            "[JumpBack]ClickContinue",
-            "[JumpBack]ClickOption",
+            "[JumpBack]DialoguesClickContinue",
+            "[JumpBack]DialoguesClickOption",
             "EndTask"
         ]
     },
@@ -36,7 +36,7 @@
             "type": "Click"
         }
     },
-    "ClickContinue": {
+    "DialoguesClickContinue": {
         "desc": "点继续",
         "recognition": {
             "type": "TemplateMatch",
@@ -56,7 +56,7 @@
             "type": "Click"
         }
     },
-    "ClickOption": {
+    "DialoguesClickOption": {
         "desc": "点选项",
         "recognition": {
             "type": "OCR",

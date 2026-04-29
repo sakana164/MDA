@@ -25,12 +25,12 @@
             }
         },
         "next": [
-            "[JumpBack]PassRedDotClick",
-            "[JumpBack]PassClick",
+            "[JumpBack]DailyRewardsClickPassRedDot",
+            "[JumpBack]DailyRewardsClickPass",
             "PassReward"
         ]
     },
-    "PassRedDotClick": {
+    "DailyRewardsClickPassRedDot": {
         "desc": "点击红点切换Pass",
         "recognition": {
             "type": "TemplateMatch",
@@ -59,7 +59,7 @@
         },
         "post_wait_freezes": 500
     },
-    "PassClick": {
+    "DailyRewardsClickPass": {
         "desc": "点击Pass",
         "recognition": {
             "type": "TemplateMatch",

@@ -29,13 +29,13 @@
         },
         "post_wait_freezes": 500,
         "next": [
-            "EpisodeClick",
+            "AdviseClickEpisode",
             "[JumpBack]EpisodeRewardScrollDown",
             "[JumpBack]EpisodeRedDot",
             "CommonClosePage"
         ]
     },
-    "EpisodeClick": {
+    "AdviseClickEpisode": {
         "desc": "点击花絮",
         "recognition": {
             "type": "TemplateMatch",

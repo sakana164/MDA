@@ -123,11 +123,11 @@
             }
         },
         "next": [
-            "ResetConfirm",
+            "ShopConfirmReset",
             "FreeReset"
         ]
     },
-    "ResetConfirm": {
+    "ShopConfirmReset": {
         "desc": "确认刷新",
         "recognition": {
             "type": "TemplateMatch",
@@ -148,14 +148,14 @@
         },
         "post_wait_freezes": 1000
     },
-    "PurchaseCheck": {
+    "ShopPurchaseCheck": {
         "desc": "当货品为芯尘盒且货币为宝珠时不购买转而关闭页面",
         "recognition": {
             "type": "And",
             "param": {
                 "all_of": [
-                    "GemCheck",
-                    "GoodsCheck"
+                    "ShopCheckGem",
+                    "ShopCheckGoods"
                 ]
             }
         },
@@ -165,7 +165,7 @@
             "EndTask"
         ]
     },
-    "GemCheck": {
+    "ShopCheckGem": {
         "desc": "宝珠检查",
         "recognition": {
             "type": "TemplateMatch",
@@ -177,12 +177,12 @@
                     34
                 ],
                 "template": [
-                    "Shop/GemCheck.png"
+                    "Shop/ShopCheckGem.png"
                 ]
             }
         }
     },
-    "GoodsCheck": {
+    "ShopCheckGoods": {
         "desc": "商品检查",
         "recognition": {
             "type": "OCR",
