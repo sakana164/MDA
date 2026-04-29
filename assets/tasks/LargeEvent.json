@@ -1,0 +1,110 @@
+{
+    "task": [
+        {
+            "name": "LargeEvent",
+            "label": "$task.LargeEvent.label",
+            "entry": "LargeEvent",
+            "description": "$task.LargeEvent.description",
+            "pipeline_override": {
+                "LargeEventLoginStamp": {
+                    "enabled": false
+                },
+                "LargeEventChallenge": {
+                    "enabled": false
+                },
+                "LargeEventStory": {
+                    "enabled": false
+                },
+                "LargeEventMission": {
+                    "enabled": false
+                }
+            },
+            "option": [
+                "LargeEventTheme",
+                "LargeEventContent"
+            ],
+            "group": [
+                "daily"
+            ]
+        }
+    ],
+    "option": {
+        "LargeEventTheme": {
+            "type": "select",
+            "default_case": "StarAnis",
+            "label": "$option.LargeEventTheme.label",
+            "cases": [
+                {
+                    "name": "StarAnis",
+                    "label": "$option.LargeEventTheme.StarAnis",
+                    "pipeline_override": {
+                        "LargeEventEntry": {
+                            "recognition": {
+                                "type": "TemplateMatch",
+                                "param": {
+                                    "roi": [
+                                        824,
+                                        571,
+                                        145,
+                                        68
+                                    ],
+                                    "template": [
+                                        "LargeEvent/StarAnis.png"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "LargeEventContent": {
+            "type": "checkbox",
+            "default_case": [
+                "LargeEventLoginStamp",
+                "LargeEventChallenge",
+                "LargeEventStory",
+                "LargeEventMission"
+            ],
+            "label": "$option.LargeEventContent.label",
+            "cases": [
+                {
+                    "name": "LargeEventLoginStamp",
+                    "label": "$option.LargeEventContent.LargeEventLoginStamp",
+                    "pipeline_override": {
+                        "LargeEventLoginStamp": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "LargeEventChallenge",
+                    "label": "$option.LargeEventContent.LargeEventChallenge",
+                    "pipeline_override": {
+                        "LargeEventChallenge": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "LargeEventStory",
+                    "label": "$option.LargeEventContent.LargeEventStory",
+                    "pipeline_override": {
+                        "LargeEventStory": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "LargeEventMission",
+                    "label": "$option.LargeEventContent.LargeEventMission",
+                    "pipeline_override": {
+                        "LargeEventMission": {
+                            "enabled": true
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

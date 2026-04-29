@@ -1,0 +1,77 @@
+{
+    "LargeEvent": {
+        "desc": "大活动",
+        "next": [
+            "LargeEventEntry",
+            "[JumpBack]EnterHall"
+        ]
+    },
+    "LargeEventEntry": {
+        "desc": "大活动入口",
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    824,
+                    571,
+                    145,
+                    68
+                ],
+                "template": [
+                    "LargeEvent/StarAnis.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "LargeEventEventField"
+        ]
+    },
+    "LargeEventEventField": {
+        "desc": "处于活动地区",
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "LargeEventEventFlag"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "[JumpBack]LargeEventLoginStamp",
+            "[JumpBack]LargeEventChallenge",
+            "[JumpBack]LargeEventStory",
+            "[JumpBack]LargeEventMission",
+            "EndTask"
+        ]
+    },
+    "LargeEventEventFlag": {
+        "desc": "处于活动地区的标识",
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    5,
+                    18,
+                    50,
+                    16
+                ],
+                "expected": [
+                    "活动地区"
+                ]
+            }
+        }
+    },
+    "LargeEventGoBack": {
+        "desc": "返回活动地区",
+        "next": [
+            "LargeEventEventFlag",
+            "[JumpBack]GoBack"
+        ]
+    }
+}

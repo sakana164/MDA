@@ -1,0 +1,197 @@
+{
+    "LargeEventStory": {
+        "timeout": 30000,
+        "max_hit": 1,
+        "desc": "大活动剧情",
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    442,
+                    536,
+                    393,
+                    79
+                ],
+                "expected": [
+                    ".*STORY.*"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "LargeEventStoryEventPage",
+            "[JumpBack]BlankClick"
+        ]
+    },
+    "LargeEventStoryEventPage": {
+        "desc": "大活动剧情活动页面",
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "LargeEventStoryPageEventFlag"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    150,
+                    650
+                ]
+            }
+        },
+        "post_wait_freezes": {
+            "time": 500,
+            "target": [
+                314,
+                413,
+                661,
+                294
+            ]
+        },
+        "next": [
+            "LargeEventStoryEventPageRedDot",
+            "GoBack"
+        ]
+    },
+    "LargeEventStoryPageEventFlag": {
+        "desc": "大活动剧情活动页面标识",
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    5,
+                    18,
+                    50,
+                    16
+                ],
+                "expected": [
+                    "剧情活动"
+                ]
+            }
+        }
+    },
+    "LargeEventStoryEventPageRedDot": {
+        "desc": "大活动剧情活动页面的红点",
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    314,
+                    413,
+                    661,
+                    294
+                ],
+                "template": [
+                    "RedDot.png"
+                ]
+            }
+        },
+        "post_wait_freezes": 500,
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "LargeEventEventStagePage"
+        ]
+    },
+    "LargeEventEventStagePage": {
+        "desc": "大活动活动关卡页面",
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    5,
+                    18,
+                    50,
+                    16
+                ],
+                "expected": [
+                    "活动关卡"
+                ]
+            }
+        },
+        "post_wait_freezes": {
+            "time": 500,
+            "target": [
+                494,
+                505,
+                294,
+                131
+            ]
+        },
+        "next": [
+            "LargeEventEventStageBattle"
+        ]
+    },
+    "LargeEventEventStageBattle": {
+        "desc": "大活动活动关卡页面战斗",
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    438,
+                    8,
+                    408,
+                    710
+                ],
+                "expected": [
+                    ".*stage.*"
+                ],
+                "order_by": "Vertical",
+                "index": -1
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "LargeEventEventStageBattlePage",
+            "LargeEventEventStageQuickBattle"
+        ]
+    },
+    "LargeEventEventStageQuickBattle": {
+        "desc": "大活动活动关卡页面快速战斗",
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    438,
+                    8,
+                    408,
+                    710
+                ],
+                "expected": [
+                    ".*11.*"
+                ],
+                "order_by": "Vertical",
+                "index": -1
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "LargeEventEventStageBattlePage"
+        ]
+    },
+    "LargeEventEventStageBattlePage": {
+        "desc": "大活动活动关卡页面战斗页面",
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "BattleFlag"
+                ]
+            }
+        },
+        "next": [
+            "[JumpBack]StartBattle",
+            "LargeEventGoBack"
+        ]
+    }
+}

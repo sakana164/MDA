@@ -31,9 +31,75 @@
         "action": {
             "type": "Click"
         },
+        "post_wait_freezes": 500,
         "next": [
+            "[JumpBack]MultipleBattle",
             "InBattle"
         ]
+    },
+    "MultipleBattle": {
+        "desc": "多次战斗",
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    599,
+                    463,
+                    54,
+                    22
+                ],
+                "expected": [
+                    "剩余次数"
+                ]
+            }
+        },
+        "next": [
+            "MultipleBattleClickMax"
+        ]
+    },
+    "MultipleBattleClickMax": {
+        "desc": "多次战斗点击max",
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    707,
+                    491,
+                    47,
+                    30
+                ],
+                "template": [
+                    "MAX.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "MultipleBattleStartBattle"
+        ]
+    },
+    "MultipleBattleStartBattle": {
+        "desc": "多次战斗点击进行战斗",
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    705,
+                    536,
+                    88,
+                    37
+                ],
+                "expected": [
+                    "进行战斗"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_wait_freezes": 500
     },
     "CanBattle": {
         "desc": "战斗可行性检测",
@@ -91,7 +157,7 @@
         }
     },
     "CanQuickBattleFlag": {
-        "desc": "可以战斗的标识",
+        "desc": "可以快速战斗的标识",
         "recognition": {
             "type": "ColorMatch",
             "param": {
@@ -106,7 +172,7 @@
                     255,
                     255
                 ],
-                "count": 200
+                "count": 100
             }
         }
     },

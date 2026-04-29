@@ -85,6 +85,18 @@
             "type": "Click"
         }
     },
+    "BlankClick": {
+        "desc": "点击空白",
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    150,
+                    650
+                ]
+            }
+        }
+    },
     "EndTask": {
         "desc": "空节点，用于结束流程"
     }

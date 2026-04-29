@@ -101,6 +101,7 @@
         "tasks/Advise.json",
         "tasks/Cooperation.json",
         "tasks/DailyRewards.json",
+        "tasks/LargeEvent.json",
         "tasks/preset/DailyFull.json",
         "tasks/preset/QuickDaily.json"
     ]

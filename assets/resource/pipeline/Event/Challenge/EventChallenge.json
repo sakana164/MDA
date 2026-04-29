@@ -1,0 +1,104 @@
+{
+    "EventChallenge": {
+        "desc": "活动挑战",
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    442,
+                    536,
+                    393,
+                    79
+                ],
+                "expected": [
+                    ".*挑战.*"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "ChallengeStagePage"
+        ]
+    },
+    "ChallengeStagePage": {
+        "desc": "活动挑战页面",
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "ChallengeStageFlag"
+                ]
+            }
+        },
+        "post_wait_freezes": 500,
+        "next": [
+            "ChallengeStage",
+            "ClearStage"
+        ]
+    },
+    "ChallengeStageFlag": {
+        "desc": "活动挑战入口的标识",
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    5,
+                    18,
+                    50,
+                    16
+                ],
+                "expected": [
+                    "挑战关卡"
+                ]
+            }
+        }
+    },
+    "ChallengeStage": {
+        "desc": "未挑战的关卡",
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    452,
+                    253,
+                    379,
+                    424
+                ],
+                "expected": [
+                    ".*CHALLENGE.*"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "StartBattle"
+        ]
+    },
+    "ClearStage": {
+        "desc": "已挑战的关卡",
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    452,
+                    253,
+                    379,
+                    424
+                ],
+                "expected": [
+                    ".*CLEAR.*"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "StartBattle"
+        ]
+    }
+}

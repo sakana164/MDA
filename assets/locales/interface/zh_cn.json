@@ -97,5 +97,14 @@
     "preset.DailyFull.description": "执行所有日常任务",
     "preset.QuickDaily.label": "快速日常",
     "preset.QuickDaily.description": "仅执行部分日常任务，快速拿满每日奖励",
-    "focus.ManualInterceptionBattle.Succeeded": "检测到拦截战已刷新，请手动开始拦截战"
+    "focus.ManualInterceptionBattle.Succeeded": "检测到拦截战已刷新，请手动开始拦截战",
+    "task.LargeEvent.label": "大活动",
+    "task.LargeEvent.description": "进入大活动界面，完成相关任务",
+    "option.LargeEventTheme.label": "活动主题",
+    "option.LargeEventTheme.StarAnis": "STAR ANIS",
+    "option.LargeEventContent.label": "大活动内容",
+    "option.LargeEventContent.LargeEventLoginStamp": "大活动签到",
+    "option.LargeEventContent.LargeEventChallenge": "大活动挑战",
+    "option.LargeEventContent.LargeEventStory": "大活动剧情",
+    "option.LargeEventContent.LargeEventMission": "大活动任务"
 }

@@ -1,0 +1,136 @@
+{
+    "LargeEventMission": {
+        "max_hit": 1,
+        "desc": "大活动任务",
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    1250,
+                    112,
+                    30,
+                    107
+                ],
+                "template": [
+                    "RedDot.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -10,
+                    10,
+                    0,
+                    0
+                ]
+            }
+        },
+        "next": [
+            "LargeEventMissionFlag"
+        ]
+    },
+    "LargeEventMissionFlag": {
+        "desc": "大活动任务内部的标识",
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    680,
+                    624,
+                    137,
+                    35
+                ],
+                "expected": [
+                    ".*全部.*"
+                ]
+            }
+        },
+        "next": [
+            "LargeEventMissionRedDot"
+        ]
+    },
+    "LargeEventMissionRedDot": {
+        "desc": "大活动任务的红点",
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    453,
+                    106,
+                    375,
+                    59
+                ],
+                "template": [
+                    "PassRedDot.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -10,
+                    10,
+                    0,
+                    0
+                ]
+            }
+        },
+        "next": [
+            "LargeEventMissionClaimed",
+            "[JumpBack]LargeEventMissionClaimAll",
+            "[JumpBack]RewardConfirm",
+            "LargeEventMissionRedDot"
+        ]
+    },
+    "LargeEventMissionClaimAll": {
+        "desc": "大活动任务奖励领取",
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    680,
+                    624,
+                    137,
+                    35
+                ],
+                "expected": [
+                    ".*全部.*"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        }
+    },
+    "LargeEventMissionClaimed": {
+        "desc": "大活动任务奖励已领取",
+        "recognition": {
+            "type": "ColorMatch",
+            "param": {
+                "roi": [
+                    680,
+                    624,
+                    137,
+                    35
+                ],
+                "lower": [
+                    100,
+                    100,
+                    100
+                ],
+                "upper": [
+                    180,
+                    180,
+                    180
+                ],
+                "count": 500
+            }
+        },
+        "next": [
+            "GoBack"
+        ]
+    }
+}

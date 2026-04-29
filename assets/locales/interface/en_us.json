@@ -97,5 +97,14 @@
     "preset.DailyFull.description": "Execute all daily tasks, including simulation room, arena, interception, tribe tower, etc.",
     "preset.QuickDaily.label": "Quick Daily",
     "preset.QuickDaily.description": "Only execute simulation room, interception, advise, outpost, shop, and daily rewards",
-    "focus.ManualInterceptionBattle.Succeeded": "Interception battle has been refreshed, please start the battle manually"
+    "focus.ManualInterceptionBattle.Succeeded": "Interception battle has been refreshed, please start the battle manually",
+    "task.LargeEvent.label": "Large Event",
+    "task.LargeEvent.description": "Enter the large event interface and complete related tasks",
+    "option.LargeEventTheme.label": "Event Theme",
+    "option.LargeEventTheme.StarAnis": "STAR ANIS",
+    "option.LargeEventContent.label": "Large Event Content",
+    "option.LargeEventContent.LargeEventLoginStamp": "Login Stamp",
+    "option.LargeEventContent.LargeEventChallenge": "Challenge",
+    "option.LargeEventContent.LargeEventStory": "Story",
+    "option.LargeEventContent.LargeEventMission": "Mission"
 }

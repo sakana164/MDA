@@ -1,0 +1,51 @@
+{
+    "LargeEventLoginStamp": {
+        "max_hit": 1,
+        "desc": "大活动签到",
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    442,
+                    536,
+                    393,
+                    79
+                ],
+                "expected": [
+                    ".*签到.*"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "LargeEventLoginStampClaim"
+        ]
+    },
+    "LargeEventLoginStampClaim": {
+        "desc": "大活动签到奖励领取",
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    651,
+                    649,
+                    162,
+                    37
+                ],
+                "expected": [
+                    "全部领取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_wait_freezes": 1000,
+        "next": [
+            "[JumpBack]RewardConfirm",
+            "LargeEventGoBack"
+        ]
+    }
+}
