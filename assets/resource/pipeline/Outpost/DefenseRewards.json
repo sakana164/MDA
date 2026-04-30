@@ -47,7 +47,7 @@
             "[JumpBack]OutpostClaimDefenseRewards",
             "[JumpBack]WipeOut",
             "[JumpBack]CommonConfirmReward",
-            "OutpostOnMainPage",
+            "OutpostMainPageEntered",
             "[JumpBack]CommonGoBack"
         ]
     },

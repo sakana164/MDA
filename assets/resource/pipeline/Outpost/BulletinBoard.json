@@ -54,7 +54,7 @@
             "OutpostBulletinBoardVisible",
             "[JumpBack]BulletinBoardClaim",
             "[JumpBack]BulletinBoardDispatch",
-            "OutpostOnMainPage",
+            "OutpostMainPageEntered",
             "[JumpBack]CommonGoBack"
         ]
     },
