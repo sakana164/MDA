@@ -58,7 +58,7 @@
             "type": "Click"
         },
         "next": [
-            "StartBattle"
+            "BattleStart"
         ]
     },
     "ClearStage": {
@@ -81,7 +81,7 @@
             "type": "Click"
         },
         "next": [
-            "StartBattle"
+            "BattleStart"
         ]
     },
     "EventChallengeStageVisible": {

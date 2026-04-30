@@ -1,5 +1,5 @@
 {
-    "NormalyInterception": {
+    "NormalInterception": {
         "desc": "普通拦截战",
         "recognition": {
             "type": "OCR",
@@ -30,7 +30,7 @@
             "[JumpBack]LevelD",
             "[JumpBack]LevelS",
             "[JumpBack]InterceptionEX",
-            "StartBattle"
+            "BattleStart"
         ]
     },
     "LevelD": {

@@ -3,7 +3,7 @@
         {
             "name": "CashShop",
             "label": "$task.CashShop.label",
-            "entry": "CashShop",
+            "entry": "CashShopMain",
             "description": "$task.CashShop.description",
             "option": [
                 "CashShopFreePackage",

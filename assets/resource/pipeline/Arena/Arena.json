@@ -1,13 +1,14 @@
 {
-    "Arena": {
+    "ArenaMain": {
         "next": [
-            "[JumpBack]SpecialReward",
+            "[JumpBack]ArenaSpecialRewardClaim",
             "ArkEnterArena",
             "[JumpBack]HallEnterArk"
         ]
     },
-    "SpecialReward": {
-        "desc": "累积奖励",
+    "ArenaSpecialRewardClaim": {
+        "desc": "领取累积奖励",
+        "max_hit": 1,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -28,8 +29,8 @@
         "next": [
             "[JumpBack]CommonConfirmAction",
             "[JumpBack]CommonConfirmReward",
-            "SpecialReward",
-            "EndTask"
+            "ArenaSpecialRewardClaim",
+            "BaseEndTask"
         ]
     },
     "ArkEnterArena": {
@@ -53,7 +54,7 @@
         },
         "post_wait_freezes": 1000,
         "next": [
-            "ArenaCornerVisible",
+            "ArenaCornerFlow",
             "ArkEnterArena"
         ]
     },
@@ -72,12 +73,16 @@
                     "^竞技场$"
                 ]
             }
-        },
+        }
+    },
+    "ArenaCornerFlow": {
+        "desc": "处于竞技场",
         "next": [
+            "ArenaCornerVisible",
             "ArenaEnterRookieArena",
             "ArenaEnterSpecialArena",
             "ArenaEnterChampionArena",
-            "EndTask"
+            "BaseEndTask"
         ]
     },
     "ArenaFreeBattle": {
@@ -101,7 +106,7 @@
         },
         "post_wait_freezes": 1000,
         "next": [
-            "ArenaFreeBattleVisible"
+            "ArenaFreeBattleFlow"
         ]
     },
     "ArenaFreeBattleVisible": {
@@ -119,10 +124,14 @@
                     "快速战斗"
                 ]
             }
-        },
+        }
+    },
+    "ArenaFreeBattleFlow": {
+        "desc": "检测免费战斗的页面",
         "next": [
-            "[JumpBack]QuickBattleCheck",
-            "StartBattle"
+            "ArenaFreeBattleVisible",
+            "[JumpBack]RookieArenaClickQuickBattleToggle",
+            "BattleStart"
         ]
     }
 }

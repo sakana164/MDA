@@ -27,10 +27,10 @@
             }
         },
         "next": [
-            "EpisodeViewingRedDot"
+            "AdviseClickEpisodeViewingRedDot"
         ]
     },
-    "EpisodeViewingRedDot": {
+    "AdviseEpisodeViewingRedDotVisible": {
         "desc": "点红点",
         "recognition": {
             "type": "TemplateMatch",
@@ -45,6 +45,17 @@
                     "Common/RedDot.png"
                 ],
                 "threshold": 0.8
+            }
+        }
+    },
+    "AdviseClickEpisodeViewingRedDot": {
+        "desc": "点红点",
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "AdviseEpisodeViewingRedDotVisible"
+                ]
             }
         },
         "action": {

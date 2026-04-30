@@ -1,10 +1,10 @@
 {
     "task": [
         {
-            "name": "Output",
-            "label": "$task.Output.label",
-            "entry": "Outpost",
-            "description": "$task.Output.description",
+            "name": "Outpost",
+            "label": "$task.Outpost.label",
+            "entry": "OutpostMain",
+            "description": "$task.Outpost.description",
             "option": [
                 "DefenseRewards",
                 "BulletinBoard",

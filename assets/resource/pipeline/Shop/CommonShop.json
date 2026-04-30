@@ -8,7 +8,7 @@
             "[JumpBack]FreeGoodsPurchase",
             "[JumpBack]CoreDustCasePurchase",
             "[JumpBack]FreeReset",
-            "EndTask"
+            "BaseEndTask"
         ]
     },
     "ShopEnterCommonShop": {
@@ -148,24 +148,28 @@
         },
         "post_wait_freezes": 1000
     },
-    "ShopPurchaseCheck": {
+    "ShopPurchaseBlockedByGemVisible": {
         "desc": "当货品为芯尘盒且货币为宝珠时不购买转而关闭页面",
         "recognition": {
             "type": "And",
             "param": {
                 "all_of": [
-                    "ShopCheckGem",
-                    "ShopCheckGoods"
+                    "ShopGemVisible",
+                    "ShopGoodsVisible"
                 ]
             }
-        },
+        }
+    },
+    "ShopPurchaseBlockedByGemFlow": {
+        "desc": "当货品为芯尘盒且货币为宝珠时不购买转而关闭页面",
         "next": [
+            "ShopPurchaseBlockedByGemVisible",
             "[JumpBack]CommonClosePage",
             "FreeReset",
-            "EndTask"
+            "BaseEndTask"
         ]
     },
-    "ShopCheckGem": {
+    "ShopGemVisible": {
         "desc": "宝珠检查",
         "recognition": {
             "type": "TemplateMatch",
@@ -182,7 +186,7 @@
             }
         }
     },
-    "ShopCheckGoods": {
+    "ShopGoodsVisible": {
         "desc": "商品检查",
         "recognition": {
             "type": "OCR",

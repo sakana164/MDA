@@ -3,7 +3,7 @@
         {
             "name": "Cooperation",
             "label": "$task.Cooperation.label",
-            "entry": "Cooperation",
+            "entry": "CooperationMain",
             "description": "$task.Cooperation.description",
             "group": [
                 "daily"

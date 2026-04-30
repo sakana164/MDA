@@ -4,7 +4,7 @@
         "max_hit": 1,
         "next": [
             "OutpostEnterBriefEncounter",
-            "EndTask"
+            "BaseEndTask"
         ]
     },
     "OutpostEnterBriefEncounter": {
@@ -30,7 +30,7 @@
         "next": [
             "DailyLives",
             "OutpostEnterBriefEncounter",
-            "EndTask"
+            "BaseEndTask"
         ]
     },
     "DailyLives": {
@@ -78,7 +78,7 @@
         "next": [
             "OutpostEnterDailyEvent",
             "[JumpBack]CommonConfirmAction",
-            "[JumpBack]SkipStory",
+            "[JumpBack]DialoguesSkipStory",
             "[JumpBack]CommonConfirmReward",
             "OutpostEnterBriefEncounter"
         ]

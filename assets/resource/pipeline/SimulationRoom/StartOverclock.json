@@ -58,12 +58,12 @@
     "SimulationRoomBiosSettingFlow": {
         "desc": "BIOS设置",
         "next": [
-            "SimulationRoomOverclockLevel25Selected",
+            "SimulationRoomSelectOverclockLevel25",
             "[JumpBack]SimulationRoomSelectOverclockOption",
             "[JumpBack]SimulationRoomScrollOverclockOptionsUp"
         ]
     },
-    "SimulationRoomOverclockLevel25Selected": {
+    "SimulationRoomOverclockLevel25Visible": {
         "desc": "检查难度是否为25",
         "recognition": {
             "type": "OCR",
@@ -76,6 +76,17 @@
                 ],
                 "expected": [
                     "25"
+                ]
+            }
+        }
+    },
+    "SimulationRoomSelectOverclockLevel25": {
+        "desc": "检查难度是否为25",
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "SimulationRoomOverclockLevel25Visible"
                 ]
             }
         },
@@ -178,7 +189,7 @@
             "SimulationRoomConfirmBattleEnd",
             "SimulationRoomSelectBattle",
             "[JumpBack]SimulationRoomSelectBuff",
-            "[JumpBack]StartBattle"
+            "[JumpBack]BattleStart"
         ]
     },
     "SimulationRoomConfirmBattleEnd": {

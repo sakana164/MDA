@@ -1,5 +1,5 @@
 {
-    "Interception": {
+    "InterceptionMain": {
         "next": [
             "ArkEnterInterception",
             "[JumpBack]HallEnterArk"
@@ -26,7 +26,7 @@
         },
         "post_wait_freezes": 1000,
         "next": [
-            "InterceptionCornerVisible",
+            "InterceptionBattleFlow",
             "ArkEnterInterception"
         ]
     },
@@ -45,15 +45,30 @@
                     "剩余拦截次数"
                 ]
             }
+        }
+    },
+    "InterceptionBattleFlow": {
+        "desc": "拦截战流程",
+        "next": [
+            "InterceptionClickCorner",
+            "NormalInterception",
+            "AnomalyInterception",
+            "BaseEndTask"
+        ]
+    },
+    "InterceptionClickCorner": {
+        "desc": "处于拦截战",
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "InterceptionCornerVisible"
+                ]
+            }
         },
         "action": {
             "type": "Click"
-        },
-        "next": [
-            "NormalyInterception",
-            "AnomalyInterception",
-            "EndTask"
-        ]
+        }
     },
     "ManualInterceptionBattle": {
         "desc": "手动拦截战",

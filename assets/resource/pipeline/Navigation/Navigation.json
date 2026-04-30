@@ -9,10 +9,10 @@
             "[JumpBack]DownloadCommonConfirmAction",
             "[JumpBack]LoginCommonConfirmAction",
             "[JumpBack]NavigationClickHomeButton",
-            "[JumpBack]SkipPlot",
+            "[JumpBack]NavigationSkipPlot",
             "[JumpBack]CommonCloseSale",
             "[JumpBack]CommonConfirmReward",
-            "ActiveCheck",
+            "NavigationClickFreeState",
             "[JumpBack]NavigationClickHall"
         ]
     },
@@ -104,7 +104,7 @@
             "type": "Click"
         }
     },
-    "SkipPlot": {
+    "NavigationSkipPlot": {
         "desc": "跳过",
         "recognition": {
             "type": "OCR",
@@ -147,7 +147,7 @@
             "CommonConfirmAction"
         ]
     },
-    "ActiveCheck": {
+    "NavigationFreeStateVisible": {
         "desc": "检测是否处于自由状态",
         "recognition": {
             "type": "And",
@@ -156,17 +156,28 @@
                     "CommonBellVisible"
                 ]
             }
-        },
+        }
+    },
+    "NavigationClickFreeState": {
+        "desc": "检测是否处于自由状态",
         "pre_wait_freezes": 500,
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "NavigationFreeStateVisible"
+                ]
+            }
+        },
         "action": {
             "type": "Click"
         },
         "next": [
-            "CommonNoticeVisible",
+            "NavigationNoticeFlow",
             "[Anchor]NeedCheck"
         ]
     },
-    "CommonNoticeVisible": {
+    "NavigationNoticeVisible": {
         "desc": "公告文本检测",
         "recognition": {
             "type": "OCR",
@@ -182,8 +193,12 @@
                     "Notice"
                 ]
             }
-        },
+        }
+    },
+    "NavigationNoticeFlow": {
+        "desc": "公告文本检测",
         "next": [
+            "NavigationNoticeVisible",
             "CommonClosePage"
         ]
     },
@@ -267,7 +282,7 @@
             }
         }
     },
-    "ArkRedDotInHall": {
+    "NavigationArkRedDotVisible": {
         "desc": "大厅的方舟红点",
         "recognition": {
             "type": "TemplateMatch",
@@ -321,11 +336,11 @@
             "type": "Click"
         },
         "next": [
-            "LoginRewardClaimed",
+            "NavigationLoginRewardClaimedFlow",
             "[JumpBack]CommonConfirmReward"
         ]
     },
-    "LoginRewardClaimed": {
+    "NavigationLoginRewardClaimed": {
         "desc": "确认按钮变灰",
         "recognition": {
             "type": "ColorMatch",
@@ -348,8 +363,12 @@
                 ],
                 "count": 2500
             }
-        },
+        }
+    },
+    "NavigationLoginRewardClaimedFlow": {
+        "desc": "确认按钮变灰",
         "next": [
+            "NavigationLoginRewardClaimed",
             "LoginRewardClose"
         ]
     },

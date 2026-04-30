@@ -3,7 +3,7 @@
         {
             "name": "Shop",
             "label": "$task.Shop.label",
-            "entry": "Shop",
+            "entry": "ShopMain",
             "description": "$task.Shop.description",
             "option": [
                 "CommonShopFreeGoods",
@@ -94,10 +94,10 @@
                     }
                 },
                 {
-                    "name": "ArenaShopElecCodeManual",
-                    "label": "$option.ArenaShopItemList.ArenaShopElecCodeManual",
+                    "name": "ArenaShopElectricCodeManual",
+                    "label": "$option.ArenaShopItemList.ArenaShopElectricCodeManual",
                     "pipeline_override": {
-                        "ElecCodeManualPurchase": {
+                        "ElectricCodeManualPurchase": {
                             "enabled": true
                         }
                     }

@@ -12,7 +12,7 @@
             "[JumpBack]VoucherPurchase",
             "[JumpBack]UpgradeMaterialsPurchase",
             "[JumpBack]CommonScrollUp",
-            "EndTask"
+            "BaseEndTask"
         ]
     },
     "ShopEnterRecyclingShop": {

@@ -28,7 +28,7 @@
             }
         },
         "next": [
-            "LargeEventMissionVisible"
+            "LargeEventMissionFlow"
         ]
     },
     "LargeEventMissionVisible": {
@@ -46,12 +46,16 @@
                     ".*全部.*"
                 ]
             }
-        },
+        }
+    },
+    "LargeEventMissionFlow": {
+        "desc": "大活动任务内部的标识",
         "next": [
-            "LargeEventMissionRedDot"
+            "LargeEventMissionVisible",
+            "LargeEventClickMissionRedDot"
         ]
     },
-    "LargeEventMissionRedDot": {
+    "LargeEventMissionRedDotVisible": {
         "desc": "大活动任务的红点",
         "recognition": {
             "type": "TemplateMatch",
@@ -64,6 +68,17 @@
                 ],
                 "template": [
                     "Common/PassRedDot.png"
+                ]
+            }
+        }
+    },
+    "LargeEventClickMissionRedDot": {
+        "desc": "大活动任务的红点",
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "LargeEventMissionRedDotVisible"
                 ]
             }
         },
@@ -79,10 +94,10 @@
             }
         },
         "next": [
-            "LargeEventMissionClaimed",
+            "LargeEventMissionClaimedFlow",
             "[JumpBack]LargeEventMissionClaimAll",
             "[JumpBack]CommonConfirmReward",
-            "LargeEventMissionRedDot"
+            "LargeEventClickMissionRedDot"
         ]
     },
     "LargeEventMissionClaimed": {
@@ -108,8 +123,12 @@
                 ],
                 "count": 500
             }
-        },
+        }
+    },
+    "LargeEventMissionClaimedFlow": {
+        "desc": "大活动任务奖励已领取",
         "next": [
+            "LargeEventMissionClaimed",
             "CommonGoBack"
         ]
     },

@@ -3,7 +3,7 @@
         {
             "name": "Advise",
             "label": "$task.Advise.label",
-            "entry": "Advise",
+            "entry": "AdviseMain",
             "description": "$task.Advise.description",
             "option": [
                 "NikkeAdvise",

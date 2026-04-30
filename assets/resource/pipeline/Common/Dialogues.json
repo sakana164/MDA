@@ -10,13 +10,13 @@
             }
         },
         "next": [
-            "[JumpBack]SkipStory",
+            "[JumpBack]DialoguesSkipStory",
             "[JumpBack]DialoguesClickContinue",
             "[JumpBack]DialoguesClickOption",
-            "EndTask"
+            "BaseEndTask"
         ]
     },
-    "SkipStory": {
+    "DialoguesSkipStory": {
         "desc": "跳过剧情",
         "recognition": {
             "type": "OCR",

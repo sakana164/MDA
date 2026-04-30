@@ -26,7 +26,7 @@
         },
         "next": [
             "[JumpBack]SimulationRoomConfirmBiosUpdate",
-            "SimulationRoomCornerVisible",
+            "SimulationRoomCornerFlow",
             "SimulationRoomEnter"
         ]
     },
@@ -65,11 +65,15 @@
                     "模拟室"
                 ]
             }
-        },
+        }
+    },
+    "SimulationRoomCornerFlow": {
+        "desc": "处于模拟室",
         "next": [
+            "SimulationRoomCornerVisible",
             "[JumpBack]SimulationRoomBeginSimulation",
             "[JumpBack]SimulationRoomStartOverclock",
-            "EndTask"
+            "BaseEndTask"
         ]
     }
 }

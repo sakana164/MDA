@@ -4,7 +4,7 @@
         "max_hit": 1,
         "next": [
             "EmailStart",
-            "EndTask"
+            "BaseEndTask"
         ]
     },
     "EmailStart": {
@@ -35,7 +35,7 @@
             }
         },
         "next": [
-            "DailyRewardsEmailVisible",
+            "DailyRewardsEmailFlow",
             "EmailStart"
         ]
     },
@@ -54,14 +54,18 @@
                     "邮箱"
                 ]
             }
-        },
+        }
+    },
+    "DailyRewardsEmailFlow": {
+        "desc": "邮箱的标志",
         "next": [
-            "[JumpBack]EmailRedDot",
+            "DailyRewardsEmailVisible",
+            "[JumpBack]DailyRewardsHandleEmailRedDot",
             "[JumpBack]CommonConfirmReward",
             "CommonClosePage"
         ]
     },
-    "EmailRedDot": {
+    "DailyRewardsEmailRedDotVisible": {
         "desc": "邮箱内部的的红点，代表有未领取的奖励",
         "recognition": {
             "type": "TemplateMatch",
@@ -74,6 +78,17 @@
                 ],
                 "template": [
                     "Common/RedDot.png"
+                ]
+            }
+        }
+    },
+    "DailyRewardsHandleEmailRedDot": {
+        "desc": "邮箱内部的的红点，代表有未领取的奖励",
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "DailyRewardsEmailRedDotVisible"
                 ]
             }
         },

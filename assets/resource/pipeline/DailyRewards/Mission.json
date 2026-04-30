@@ -4,7 +4,7 @@
         "max_hit": 1,
         "next": [
             "MissionStart",
-            "EndTask"
+            "BaseEndTask"
         ]
     },
     "MissionStart": {
@@ -36,11 +36,11 @@
         },
         "post_wait_freezes": 500,
         "next": [
-            "[JumpBack]MissionRedDot",
-            "EndTask"
+            "[JumpBack]DailyRewardsClickMissionRedDot",
+            "BaseEndTask"
         ]
     },
-    "MissionRedDot": {
+    "DailyRewardsMissionRedDotVisible": {
         "desc": "任务的红点",
         "recognition": {
             "type": "TemplateMatch",
@@ -53,6 +53,17 @@
                 ],
                 "template": [
                     "Common/RedDot.png"
+                ]
+            }
+        }
+    },
+    "DailyRewardsClickMissionRedDot": {
+        "desc": "任务的红点",
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "DailyRewardsMissionRedDotVisible"
                 ]
             }
         },
@@ -68,13 +79,13 @@
             }
         },
         "next": [
-            "MissionClaimed",
+            "DailyRewardsMissionClaimedFlow",
             "[JumpBack]MissionClaimAll",
             "[JumpBack]CommonConfirmReward",
-            "MissionRedDot"
+            "DailyRewardsClickMissionRedDot"
         ]
     },
-    "MissionClaimed": {
+    "DailyRewardsMissionClaimed": {
         "desc": "已领取",
         "recognition": {
             "type": "ColorMatch",
@@ -97,8 +108,12 @@
                 ],
                 "count": 200
             }
-        },
+        }
+    },
+    "DailyRewardsMissionClaimedFlow": {
+        "desc": "已领取",
         "next": [
+            "DailyRewardsMissionClaimed",
             "CommonClosePage"
         ]
     },

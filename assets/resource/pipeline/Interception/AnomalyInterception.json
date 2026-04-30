@@ -76,7 +76,7 @@
             "type": "Click"
         },
         "next": [
-            "StartBattle"
+            "BattleStart"
         ]
     },
     "AnomalyMirrorContainer": {

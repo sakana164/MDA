@@ -1,5 +1,5 @@
 {
-    "Shop": {
+    "ShopMain": {
         "next": [
             "HallEnterShop",
             "[JumpBack]NavigationEnterHall"
@@ -25,7 +25,7 @@
             "type": "Click"
         },
         "next": [
-            "ShopCornerVisible",
+            "ShopCornerFlow",
             "HallEnterShop"
         ]
     },
@@ -44,12 +44,16 @@
                     "百货商店"
                 ]
             }
-        },
+        }
+    },
+    "ShopCornerFlow": {
+        "desc": "处于百货商店",
         "next": [
+            "ShopCornerVisible",
             "[JumpBack]CommonShop",
             "[JumpBack]ArenaShop",
             "[JumpBack]RecyclingShop",
-            "EndTask"
+            "BaseEndTask"
         ]
     },
     "ShopConfirmPurchase": {
@@ -69,7 +73,7 @@
             }
         },
         "next": [
-            "ShopPurchaseCheck",
+            "ShopPurchaseBlockedByGemFlow",
             "[JumpBack]CommonClickMax",
             "[JumpBack]CommonConfirmAction",
             "CommonConfirmReward"

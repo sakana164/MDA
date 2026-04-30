@@ -8,10 +8,10 @@
             "[JumpBack]FireCodeManualPurchase",
             "[JumpBack]WaterCodeManualPurchase",
             "[JumpBack]WindCodeManualPurchase",
-            "[JumpBack]ElecCodeManualPurchase",
+            "[JumpBack]ElectricCodeManualPurchase",
             "[JumpBack]IronCodeManualPurchase",
             "[JumpBack]CodeManualSelectionBoxPurchase",
-            "EndTask"
+            "BaseEndTask"
         ]
     },
     "ShopEnterArenaShop": {
@@ -116,7 +116,7 @@
             "type": "Click"
         }
     },
-    "ElecCodeManualPurchase": {
+    "ElectricCodeManualPurchase": {
         "desc": "购买电击属性代码手册",
         "enabled": false,
         "recognition": {
@@ -128,7 +128,7 @@
                     1222,
                     325
                 ],
-                "template": "Shop/ElecCodeManual.png",
+                "template": "Shop/ElectricCodeManual.png",
                 "threshold": 0.9
             }
         },

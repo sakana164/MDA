@@ -3,7 +3,7 @@
         {
             "name": "LargeEvent",
             "label": "$task.LargeEvent.label",
-            "entry": "LargeEvent",
+            "entry": "LargeEventMain",
             "description": "$task.LargeEvent.description",
             "pipeline_override": {
                 "LargeEventLoginStamp": {

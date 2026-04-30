@@ -4,7 +4,7 @@
         "max_hit": 1,
         "next": [
             "FreeRecruitStart",
-            "EndTask"
+            "BaseEndTask"
         ]
     },
     "FreeRecruitStart": {
@@ -22,17 +22,28 @@
         },
         "post_wait_freezes": 1000,
         "next": [
-            "[JumpBack]FreeRecruitAble",
+            "[JumpBack]DailyRewardsHandleFreeRecruitAvailable",
             "NavigationEnterHall"
         ]
     },
-    "FreeRecruitAble": {
+    "DailyRewardsFreeRecruitAvailable": {
         "desc": "可以免费招募",
         "recognition": {
             "type": "And",
             "param": {
                 "all_of": [
                     "DailyRewardsFreeRecruitVisible"
+                ]
+            }
+        }
+    },
+    "DailyRewardsHandleFreeRecruitAvailable": {
+        "desc": "可以免费招募",
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "DailyRewardsFreeRecruitAvailable"
                 ]
             }
         },
@@ -60,7 +71,7 @@
             "type": "Click"
         },
         "next": [
-            "[JumpBack]SkipPlot",
+            "[JumpBack]NavigationSkipPlot",
             "DailyRewardsConfirmRecruit"
         ]
     },

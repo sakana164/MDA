@@ -3,7 +3,7 @@
         {
             "name": "Arena",
             "label": "$task.Arena.label",
-            "entry": "Arena",
+            "entry": "ArenaMain",
             "description": "$task.Arena.description",
             "option": [
                 "SpecialReward",
@@ -24,7 +24,7 @@
                 {
                     "name": "Yes",
                     "pipeline_override": {
-                        "SpecialReward": {
+                        "ArenaSpecialRewardClaim": {
                             "enabled": true
                         }
                     }
@@ -32,7 +32,7 @@
                 {
                     "name": "No",
                     "pipeline_override": {
-                        "SpecialReward": {
+                        "ArenaSpecialRewardClaim": {
                             "enabled": false
                         }
                     }

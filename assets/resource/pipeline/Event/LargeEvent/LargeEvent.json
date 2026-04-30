@@ -1,5 +1,5 @@
 {
-    "LargeEvent": {
+    "LargeEventMain": {
         "desc": "大活动",
         "next": [
             "LargeEventEntry",
@@ -47,7 +47,7 @@
             "[JumpBack]LargeEventChallenge",
             "[JumpBack]LargeEventStory",
             "[JumpBack]LargeEventMission",
-            "EndTask"
+            "BaseEndTask"
         ]
     },
     "LargeEventMainVisible": {

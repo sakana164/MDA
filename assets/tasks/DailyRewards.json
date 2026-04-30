@@ -3,7 +3,7 @@
         {
             "name": "DailyRewards",
             "label": "$task.DailyRewards.label",
-            "entry": "DailyRewards",
+            "entry": "DailyRewardsMain",
             "description": "$task.DailyRewards.description",
             "option": [
                 "FriendPoints",

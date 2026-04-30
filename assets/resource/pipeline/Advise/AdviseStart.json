@@ -2,12 +2,12 @@
     "AdviseStart": {
         "desc": "开始咨询",
         "next": [
-            "AttemptsExhausted",
-            "AdviseCollectionCompleted",
-            "AdviseCollectionNotCompleted"
+            "AdviseAttemptsExhausted",
+            "AdviseCollectionCompletedFlow",
+            "AdviseCollectionNotCompletedFlow"
         ]
     },
-    "AttemptsExhausted": {
+    "AdviseAttemptsExhausted": {
         "desc": "次数耗尽",
         "recognition": {
             "type": "ColorMatch",
@@ -48,8 +48,12 @@
                 ],
                 "threshold": 0.9
             }
-        },
+        }
+    },
+    "AdviseCollectionCompletedFlow": {
+        "desc": "已收集完咨询日志",
         "next": [
+            "AdviseCollectionCompleted",
             "QuickAdvise"
         ]
     },
@@ -86,8 +90,8 @@
             "type": "And",
             "param": {
                 "all_of": [
-                    "Favorited",
-                    "Maxed"
+                    "AdviseFavoriteSelected",
+                    "AdviseMaxLevelVisible"
                 ]
             }
         },
@@ -160,7 +164,7 @@
             "AdviseStart"
         ]
     },
-    "AdviseCollectionNotCompleted": {
+    "AdviseCollectionNotCompletedFlow": {
         "desc": "未收集完咨询日志",
         "next": [
             "NormalAdvise"
@@ -193,7 +197,7 @@
             "NextAdvise"
         ]
     },
-    "Favorited": {
+    "AdviseFavoriteSelected": {
         "desc": "已收藏",
         "recognition": {
             "type": "ColorMatch",
@@ -218,7 +222,7 @@
             }
         }
     },
-    "Maxed": {
+    "AdviseMaxLevelVisible": {
         "desc": "已max",
         "recognition": {
             "type": "OCR",

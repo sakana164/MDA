@@ -17,7 +17,7 @@
                     "name": "SimulationRoom",
                     "option": {
                         "BeginSimulation": "Yes",
-                        "StartOverlock": "Yes",
+                        "StartOverclock": "Yes",
                         "AutoBIOSSetting": "Yes"
                     }
                 },
@@ -30,7 +30,7 @@
                     }
                 },
                 {
-                    "name": "Output",
+                    "name": "Outpost",
                     "option": {
                         "DefenseRewards": "Yes",
                         "BulletinBoard": "Yes",

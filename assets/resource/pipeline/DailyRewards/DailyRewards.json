@@ -1,5 +1,5 @@
 {
-    "DailyRewards": {
+    "DailyRewardsMain": {
         "desc": "每日奖励入口",
         "next": [
             "DailyRewardsStart",
@@ -23,7 +23,7 @@
             "[JumpBack]Mission",
             "[JumpBack]DailyRewardsPassMain",
             "[JumpBack]FreeRecruit",
-            "EndTask"
+            "BaseEndTask"
         ]
     }
 }

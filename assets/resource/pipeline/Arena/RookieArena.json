@@ -7,7 +7,7 @@
             "param": {
                 "all_of": [
                     "RookieArena",
-                    "RookieArenaRedDot"
+                    "RookieArenaRedDotVisible"
                 ]
             }
         },
@@ -15,7 +15,7 @@
             "type": "Click"
         },
         "next": [
-            "RookieArenaCornerVisible"
+            "RookieArenaCornerFlow"
         ]
     },
     "RookieArenaCornerVisible": {
@@ -33,14 +33,18 @@
                     "新人竞技场"
                 ]
             }
-        },
+        }
+    },
+    "RookieArenaCornerFlow": {
+        "desc": "处于新人竞技场",
         "next": [
+            "RookieArenaCornerVisible",
             "[JumpBack]ArenaFreeBattle",
-            "ArenaCornerVisible",
+            "ArenaCornerFlow",
             "[JumpBack]CommonGoBack"
         ]
     },
-    "QuickBattleCheck": {
+    "RookieArenaQuickBattleOffVisible": {
         "desc": "快速战斗检查",
         "recognition": {
             "type": "OCR",
@@ -55,12 +59,23 @@
                     "OFF"
                 ]
             }
+        }
+    },
+    "RookieArenaClickQuickBattleToggle": {
+        "desc": "快速战斗检查",
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "RookieArenaQuickBattleOffVisible"
+                ]
+            }
         },
         "action": {
             "type": "Click"
         }
     },
-    "RookieArenaRedDot": {
+    "RookieArenaRedDotVisible": {
         "desc": "新人竞技场的红点",
         "recognition": {
             "type": "TemplateMatch",

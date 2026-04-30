@@ -31,7 +31,7 @@
         "next": [
             "AdviseClickEpisode",
             "[JumpBack]EpisodeRewardScrollDown",
-            "[JumpBack]EpisodeRedDot",
+            "[JumpBack]AdviseEpisodeRedDotVisible",
             "CommonClosePage"
         ]
     },
@@ -89,7 +89,7 @@
         },
         "post_wait_freezes": 20
     },
-    "EpisodeRedDot": {
+    "AdviseEpisodeRedDotVisible": {
         "desc": "花絮奖励的红点",
         "recognition": {
             "type": "TemplateMatch",

@@ -7,7 +7,7 @@
             "param": {
                 "all_of": [
                     "SpecialArena",
-                    "SpecialArenaRedDot"
+                    "SpecialArenaRedDotVisible"
                 ]
             }
         },
@@ -15,7 +15,7 @@
             "type": "Click"
         },
         "next": [
-            "SpecialArenaCornerVisible"
+            "SpecialArenaCornerFlow"
         ]
     },
     "SpecialArenaCornerVisible": {
@@ -33,14 +33,18 @@
                     "特殊竞技场"
                 ]
             }
-        },
+        }
+    },
+    "SpecialArenaCornerFlow": {
+        "desc": "处于特殊竞技场",
         "next": [
+            "SpecialArenaCornerVisible",
             "[JumpBack]ArenaFreeBattle",
-            "ArenaCornerVisible",
+            "ArenaCornerFlow",
             "[JumpBack]CommonGoBack"
         ]
     },
-    "SpecialArenaRedDot": {
+    "SpecialArenaRedDotVisible": {
         "desc": "特殊竞技场的红点",
         "recognition": {
             "type": "TemplateMatch",

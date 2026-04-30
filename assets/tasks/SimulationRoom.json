@@ -7,7 +7,7 @@
             "description": "$task.SimulationRoom.description",
             "option": [
                 "BeginSimulation",
-                "StartOverlock"
+                "StartOverclock"
             ],
             "group": [
                 "daily"
@@ -37,9 +37,9 @@
                 }
             ]
         },
-        "StartOverlock": {
+        "StartOverclock": {
             "type": "switch",
-            "label": "$option.StartOverlock.label",
+            "label": "$option.StartOverclock.label",
             "cases": [
                 {
                     "name": "Yes",

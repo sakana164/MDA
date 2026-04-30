@@ -3,7 +3,7 @@
         {
             "name": "TribeTower",
             "label": "$task.TribeTower.label",
-            "entry": "TribeTower",
+            "entry": "TribeTowerMain",
             "description": "$task.TribeTower.description",
             "option": [
                 "TribeTowerEnterCommonTower",

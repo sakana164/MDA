@@ -1,5 +1,5 @@
 {
-    "Cooperation": {
+    "CooperationMain": {
         "desc": "协同作战入口",
         "max_hit": 1,
         "next": [
@@ -20,7 +20,7 @@
         "next": [
             "CooperationSearch",
             "[JumpBack]SlideBanner",
-            "EndTask"
+            "BaseEndTask"
         ]
     },
     "CooperationSearch": {

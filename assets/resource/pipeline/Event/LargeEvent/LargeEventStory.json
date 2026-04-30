@@ -54,11 +54,11 @@
             ]
         },
         "next": [
-            "LargeEventStoryEventPageRedDot",
+            "LargeEventClickStoryEventPageRedDot",
             "CommonGoBack"
         ]
     },
-    "LargeEventStoryEventPageRedDot": {
+    "LargeEventStoryEventPageRedDotVisible": {
         "desc": "大活动剧情活动页面的红点",
         "recognition": {
             "type": "TemplateMatch",
@@ -73,11 +73,22 @@
                     "Common/RedDot.png"
                 ]
             }
+        }
+    },
+    "LargeEventClickStoryEventPageRedDot": {
+        "desc": "大活动剧情活动页面的红点",
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "LargeEventStoryEventPageRedDotVisible"
+                ]
+            }
         },
-        "post_wait_freezes": 500,
         "action": {
             "type": "Click"
         },
+        "post_wait_freezes": 500,
         "next": [
             "LargeEventEventStagePage"
         ]
@@ -148,7 +159,7 @@
             }
         },
         "next": [
-            "[JumpBack]StartBattle",
+            "[JumpBack]BattleStart",
             "LargeEventGoBack"
         ]
     },

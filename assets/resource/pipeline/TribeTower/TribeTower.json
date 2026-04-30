@@ -1,5 +1,5 @@
 {
-    "TribeTower": {
+    "TribeTowerMain": {
         "next": [
             "ArkEnterTribeTower",
             "[JumpBack]HallEnterArk"
@@ -46,7 +46,7 @@
             "TribeTowerEnterMissilisTower",
             "TribeTowerEnterTetraTower",
             "TribeTowerEnterPilgrimTower",
-            "EndTask"
+            "BaseEndTask"
         ]
     },
     "TribeTowerEnterCommonTower": {
@@ -111,7 +111,7 @@
     "TowerBattle2": {
         "desc": "无限之塔战斗流程2",
         "next": [
-            "[JumpBack]StartBattle",
+            "[JumpBack]BattleStart",
             "[JumpBack]CommonCloseSale",
             "TowerTask",
             "[JumpBack]CommonGoBack"

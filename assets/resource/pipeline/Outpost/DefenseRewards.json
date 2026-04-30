@@ -20,7 +20,7 @@
             "type": "Click"
         },
         "next": [
-            "OutpostDefenseRewardsVisible"
+            "OutpostDefenseRewardsFlow"
         ]
     },
     "OutpostDefenseRewardsVisible": {
@@ -38,8 +38,12 @@
                     "防御前哨基地"
                 ]
             }
-        },
+        }
+    },
+    "OutpostDefenseRewardsFlow": {
+        "desc": "防御奖励标志",
         "next": [
+            "OutpostDefenseRewardsVisible",
             "[JumpBack]OutpostClaimDefenseRewards",
             "[JumpBack]WipeOut",
             "[JumpBack]CommonConfirmReward",
@@ -77,7 +81,7 @@
             "param": {
                 "all_of": [
                     "OutpostWipeOutVisible",
-                    "WipeOutRedDot"
+                    "OutpostWipeOutRedDotVisible"
                 ]
             }
         },
@@ -111,7 +115,7 @@
         "next": [
             "[JumpBack]CommonConfirmReward",
             "[JumpBack]CancelWipeOut",
-            "EndTask"
+            "BaseEndTask"
         ]
     },
     "CancelWipeOut": {
@@ -151,7 +155,7 @@
             }
         }
     },
-    "WipeOutRedDot": {
+    "OutpostWipeOutRedDotVisible": {
         "desc": "一举歼灭的红点",
         "recognition": {
             "type": "TemplateMatch",

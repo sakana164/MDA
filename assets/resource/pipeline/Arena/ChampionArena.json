@@ -7,7 +7,7 @@
             "param": {
                 "all_of": [
                     "ChampionArena",
-                    "ChampionArenaRedDot"
+                    "ChampionArenaRedDotVisible"
                 ]
             }
         },
@@ -15,7 +15,7 @@
             "type": "Click"
         },
         "next": [
-            "ChampionArenaCornerVisible"
+            "ChampionArenaCornerFlow"
         ]
     },
     "ChampionArenaCornerVisible": {
@@ -34,10 +34,14 @@
                 ]
             }
         },
-        "post_wait_freezes": 500,
+        "post_wait_freezes": 500
+    },
+    "ChampionArenaCornerFlow": {
+        "desc": "处于冠军竞技场",
         "next": [
+            "ChampionArenaCornerVisible",
             "ChampionArenaEnterChampionsDuel",
-            "ArenaCornerVisible",
+            "ArenaCornerFlow",
             "[JumpBack]CommonGoBack"
         ]
     },
@@ -62,7 +66,7 @@
         },
         "next": [
             "[JumpBack]CheerReward",
-            "CompetitionNameCornerVisible"
+            "ChampionArenaCompetitionFlow"
         ]
     },
     "CheerReward": {
@@ -102,8 +106,12 @@
                     "冠军争霸赛"
                 ]
             }
-        },
+        }
+    },
+    "ChampionArenaCompetitionFlow": {
+        "desc": "比赛的标识",
         "next": [
+            "CompetitionNameCornerVisible",
             "CheerUp"
         ]
     },
@@ -128,11 +136,11 @@
         },
         "post_wait_freezes": 500,
         "next": [
-            "CheerUpCheck",
+            "ChampionArenaCheerUpAvailableFlow",
             "CheerUpRight"
         ]
     },
-    "CheerUpCheck": {
+    "ChampionArenaCheerUpAvailable": {
         "desc": "应援检测",
         "recognition": {
             "type": "OCR",
@@ -147,8 +155,12 @@
                     "^[5-9]"
                 ]
             }
-        },
+        }
+    },
+    "ChampionArenaCheerUpAvailableFlow": {
+        "desc": "应援检测",
         "next": [
+            "ChampionArenaCheerUpAvailable",
             "CheerUpLeft"
         ]
     },
@@ -198,7 +210,7 @@
             "CommonConfirmAction"
         ]
     },
-    "ChampionArenaRedDot": {
+    "ChampionArenaRedDotVisible": {
         "desc": "冠军竞技场的红点",
         "recognition": {
             "type": "TemplateMatch",
