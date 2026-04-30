@@ -55,7 +55,7 @@
             "LargeEventClickMissionRedDot"
         ]
     },
-    "LargeEventMissionRedDotVisible": {
+    "LargeEventClickMissionRedDot": {
         "desc": "大活动任务的红点",
         "recognition": {
             "type": "TemplateMatch",
@@ -68,17 +68,6 @@
                 ],
                 "template": [
                     "Common/PassRedDot.png"
-                ]
-            }
-        }
-    },
-    "LargeEventClickMissionRedDot": {
-        "desc": "大活动任务的红点",
-        "recognition": {
-            "type": "And",
-            "param": {
-                "all_of": [
-                    "LargeEventMissionRedDotVisible"
                 ]
             }
         },

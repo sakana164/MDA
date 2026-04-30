@@ -58,7 +58,7 @@
             "CommonGoBack"
         ]
     },
-    "LargeEventStoryEventPageRedDotVisible": {
+    "LargeEventClickStoryEventPageRedDot": {
         "desc": "大活动剧情活动页面的红点",
         "recognition": {
             "type": "TemplateMatch",
@@ -73,28 +73,17 @@
                     "Common/RedDot.png"
                 ]
             }
-        }
-    },
-    "LargeEventClickStoryEventPageRedDot": {
-        "desc": "大活动剧情活动页面的红点",
-        "recognition": {
-            "type": "And",
-            "param": {
-                "all_of": [
-                    "LargeEventStoryEventPageRedDotVisible"
-                ]
-            }
         },
         "action": {
             "type": "Click"
         },
         "post_wait_freezes": 500,
         "next": [
-            "LargeEventEventStagePage"
+            "LargeEventEventStagePageFlow"
         ]
     },
-    "LargeEventEventStagePage": {
-        "desc": "大活动活动关卡页面",
+    "LargeEventEventStagePageEntered": {
+        "desc": "已进入大活动活动关卡页面",
         "recognition": {
             "type": "OCR",
             "param": {
@@ -106,6 +95,17 @@
                 ],
                 "expected": [
                     "活动关卡"
+                ]
+            }
+        }
+    },
+    "LargeEventEventStagePageFlow": {
+        "desc": "大活动活动关卡页面流程",
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "LargeEventEventStagePageEntered"
                 ]
             }
         },

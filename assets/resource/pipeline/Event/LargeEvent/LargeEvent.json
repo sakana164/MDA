@@ -26,32 +26,12 @@
             "type": "Click"
         },
         "next": [
-            "LargeEventEventField"
+            "LargeEventMainPageFlow",
+            "LargeEventEntry"
         ]
     },
-    "LargeEventEventField": {
-        "desc": "处于活动地区",
-        "recognition": {
-            "type": "And",
-            "param": {
-                "all_of": [
-                    "LargeEventMainVisible"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "[JumpBack]LargeEventLoginStamp",
-            "[JumpBack]LargeEventChallenge",
-            "[JumpBack]LargeEventStory",
-            "[JumpBack]LargeEventMission",
-            "BaseEndTask"
-        ]
-    },
-    "LargeEventMainVisible": {
-        "desc": "处于活动地区的标识",
+    "LargeEventMainPageEntered": {
+        "desc": "已进入活动地区",
         "recognition": {
             "type": "OCR",
             "param": {
@@ -67,10 +47,28 @@
             }
         }
     },
+    "LargeEventMainPageFlow": {
+        "desc": "活动地区流程",
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "LargeEventMainPageEntered"
+                ]
+            }
+        },
+        "next": [
+            "[JumpBack]LargeEventLoginStamp",
+            "[JumpBack]LargeEventChallenge",
+            "[JumpBack]LargeEventStory",
+            "[JumpBack]LargeEventMission",
+            "BaseEndTask"
+        ]
+    },
     "LargeEventGoBack": {
         "desc": "返回活动地区",
         "next": [
-            "LargeEventMainVisible",
+            "LargeEventMainPageEntered",
             "[JumpBack]CommonGoBack"
         ]
     }
