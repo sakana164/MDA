@@ -180,6 +180,25 @@
     "BattleSettlement": {
         "desc": "战斗结算",
         "recognition": {
+            "type": "Or",
+            "param": {
+                "any_of": [
+                    "BattleEscVisible",
+                    "BattleFailedVisible"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "BattleSettlement",
+            "CommonEndTask"
+        ]
+    },
+    "BattleEscVisible": {
+        "desc": "Esc可见",
+        "recognition": {
             "type": "OCR",
             "param": {
                 "roi": [
@@ -192,14 +211,24 @@
                     "ESC"
                 ]
             }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "BattleSettlement",
-            "CommonEndTask"
-        ]
+        }
+    },
+    "BattleFailedVisible": {
+        "desc": "战败可见",
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    616,
+                    262,
+                    48,
+                    30
+                ],
+                "expected": [
+                    "战败"
+                ]
+            }
+        }
     },
     "BattleCanBattle": {
         "desc": "战斗可行性检测",
