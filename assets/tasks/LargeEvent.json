@@ -5,20 +5,6 @@
             "label": "$task.LargeEvent.label",
             "entry": "LargeEventMain",
             "description": "$task.LargeEvent.description",
-            "pipeline_override": {
-                "LargeEventLoginStamp": {
-                    "enabled": false
-                },
-                "LargeEventChallenge": {
-                    "enabled": false
-                },
-                "LargeEventStory": {
-                    "enabled": false
-                },
-                "LargeEventMission": {
-                    "enabled": false
-                }
-            },
             "option": [
                 "LargeEventTheme",
                 "LargeEventStoryPriority",
