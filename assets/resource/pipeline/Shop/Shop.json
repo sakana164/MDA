@@ -81,9 +81,55 @@
         },
         "next": [
             "ShopPurchaseGemBlocked",
+            "ShopPurchasePriceBlocked",
             "[JumpBack]CommonClickMax",
             "[JumpBack]CommonConfirmAction",
             "CommonConfirmReward"
+        ]
+    },
+    "ShopPurchaseGemBlocked": {
+        "desc": "宝珠购买阻断",
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "ShopGemVisible",
+                    "ShopGoodsVisible"
+                ]
+            }
+        },
+        "next": [
+            "[JumpBack]CommonClosePage",
+            "CommonEndTask"
+        ]
+    },
+    "ShopPurchasePriceBlocked": {
+        "desc": "价格购买阻断",
+        "recognition": {
+            "type": "ColorMatch",
+            "param": {
+                "roi": [
+                    544,
+                    456,
+                    197,
+                    94
+                ],
+                "lower": [
+                    150,
+                    0,
+                    0
+                ],
+                "upper": [
+                    255,
+                    100,
+                    100
+                ],
+                "count": 100
+            }
+        },
+        "next": [
+            "[JumpBack]CommonClosePage",
+            "CommonEndTask"
         ]
     }
 }
