@@ -1,5 +1,11 @@
 {
     "AdviseMain": {
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "MembershipCheck"
+            }
+        },
         "next": [
             "AdviseEnterNikkePage",
             "[JumpBack]NavigationEnterHall"

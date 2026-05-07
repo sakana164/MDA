@@ -50,7 +50,7 @@ var (
 )
 
 const (
-	cacheExpiry    = 60 * time.Second
+	cacheExpiry    = 1 * time.Hour
 	matchThreshold = 80
 	httpTimeout    = 15 * time.Second
 )

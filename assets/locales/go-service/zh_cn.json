@@ -18,8 +18,9 @@
     "tasker.membership_warning.stopped": "🚫 任务已强制停止",
     "tasker.membership_warning.desc": "💡 此任务需要金Doro会员或以上才能执行。",
     "tasker.membership_warning.current_tier": "当前等级：",
-    "tasker.membership_warning.requirement": "要求：金Doro会员 (UserLevel >= 3)",
-    "tasker.membership_warning.tier_free": "普通用户（免费）",
+    "tasker.membership_warning.requirement": "要求：金Doro会员",
+    "tasker.membership_warning.tier_free": "普通用户",
     "tasker.membership_warning.tip": "💡 赞助后即可解锁所有会员任务",
-    "tasker.membership_warning.non_member_log": "非会员尝试执行会员任务，已停止。赞助地址: https://doropay.top"
+    "tasker.membership_check.verified": "🍊 [%s] 会员专属任务认证通过 (%s，有效期至 %s)",
+    "tasker.membership_check.denied": "🍊 [%s] 会员专属任务 - 非会员，任务已停止。赞助地址: %s"
 }
