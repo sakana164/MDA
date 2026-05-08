@@ -14,6 +14,30 @@ import (
 	"github.com/rs/zerolog/log"
 )
 
+var appVersion string
+
+// SetVersion sets the application version for debug-mode detection.
+func SetVersion(v string) {
+	appVersion = v
+}
+
+// isDebugVersion returns true when the version is below 1.0.0 (dev builds, pre-release).
+func isDebugVersion() bool {
+	if appVersion == "" || appVersion == "dev" {
+		return true
+	}
+	v := strings.TrimPrefix(appVersion, "v")
+	parts := strings.SplitN(v, ".", 3)
+	if len(parts) == 0 {
+		return true
+	}
+	major, err := strconv.Atoi(parts[0])
+	if err != nil {
+		return true
+	}
+	return major < 1
+}
+
 // MemberRecord represents a single member entry from the V6 JSON data.
 type MemberRecord struct {
 	UserID          string `json:"user_id"`
@@ -74,6 +98,17 @@ func checkMembership() *MembershipStatus {
 		MembershipType: "普通用户",
 		UserLevel:      0,
 		IsMember:       false,
+	}
+
+	// Debug versions (below 1.0.0) bypass membership verification
+	if isDebugVersion() {
+		log.Info().Str("version", appVersion).Msg("Debug version detected, bypassing membership verification")
+		return &MembershipStatus{
+			MembershipType: "金Doro会员",
+			UserLevel:      3,
+			IsMember:       true,
+			VirtualExpiry:  "99991231",
+		}
 	}
 
 	// Generate device code
