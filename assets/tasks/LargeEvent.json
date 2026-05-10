@@ -88,7 +88,7 @@
                             "recognition": {
                                 "param": {
                                     "template": [
-                                        "LargeEvent/StarAnis/StarAnisStory1StageRepeatable.png"
+                                        "LargeEvent/StarAnis/StarAnisStory2StageNormal.png"
                                     ]
                                 }
                             }
@@ -97,7 +97,7 @@
                             "recognition": {
                                 "param": {
                                     "template": [
-                                        "LargeEvent/StarAnis/StarAnisStory1StageRepeatable.png"
+                                        "LargeEvent/StarAnis/StarAnisStory2StageHardRepeatable.png"
                                     ]
                                 }
                             }
