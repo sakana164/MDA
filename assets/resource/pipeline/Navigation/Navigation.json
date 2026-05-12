@@ -277,27 +277,18 @@
     "CommonGoBack": {
         "desc": "返回",
         "recognition": {
-            "type": "OCR",
+            "type": "TemplateMatch",
             "param": {
                 "roi": [
-                    36,
-                    650,
-                    81,
-                    60
+                    0,
+                    647,
+                    93,
+                    73
                 ],
-                "replace": [
-                    [
-                        "遞",
-                        "返"
-                    ]
-                ],
-                "expected": [
-                    "返回"
+                "template": [
+                    "Common/GoBack.png"
                 ]
             }
-        },
-        "action": {
-            "type": "Click"
         },
         "post_wait_freezes": 2000
     }
