@@ -49,8 +49,8 @@
         },
         "next": [
             "[JumpBack]DailyRewardsClickPassRewardRedDot",
-            "[JumpBack]DailyRewardsClickPassRedDot",
             "[JumpBack]DailyRewardsEnterPass",
+            "[JumpBack]DailyRewardsClickPassRedDot",
             "DailyRewardsPassStart",
             "[JumpBack]CommonClosePage",
             "CommonEndTask"
