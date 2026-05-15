@@ -11,7 +11,7 @@
                     27
                 ],
                 "template": [
-                    "Common/RedDot.png"
+                    "Common/New.png"
                 ]
             }
         },
@@ -27,37 +27,29 @@
             }
         },
         "next": [
-            "AdviseClickEpisodeViewingRedDot"
+            "AdviseClickEpisodeViewingList"
         ]
     },
-    "AdviseClickEpisodeViewingRedDot": {
-        "desc": "点击花絮鉴赏会红点",
+    "AdviseClickEpisodeViewingList": {
+        "desc": "点击花絮鉴赏会列表",
         "recognition": {
-            "type": "TemplateMatch",
+            "type": "OCR",
             "param": {
                 "roi": [
-                    788,
-                    397,
-                    25,
-                    227
+                    484,
+                    410,
+                    79,
+                    21
                 ],
-                "template": [
-                    "Common/RedDot.png"
-                ],
-                "threshold": 0.8
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target_offset": [
-                    -30,
-                    30,
-                    0,
-                    0
+                "expected": [
+                    ".*EPISODE.*"
                 ]
             }
         },
+        "action": {
+            "type": "Click"
+        },
+        "post_wait_freezes": 1000,
         "next": [
             "[JumpBack]AdviseStory",
             "[JumpBack]AdvisePlayEpisode",
@@ -83,7 +75,8 @@
         },
         "action": {
             "type": "Click"
-        }
+        },
+        "post_wait_freezes": 1000
     },
     "AdviseEpisodeViewingReward": {
         "desc": "花絮鉴赏会奖励",
@@ -104,6 +97,7 @@
         "action": {
             "type": "Click"
         },
+        "post_wait_freezes": 1000,
         "next": [
             "[JumpBack]CommonConfirmReward",
             "CommonClosePage"
